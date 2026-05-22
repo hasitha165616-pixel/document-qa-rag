@@ -4,7 +4,7 @@
 [![LangChain](https://img.shields.io/badge/LangChain-RAG-green)](https://langchain.com)
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
 
-**Live Demo:** [Try it here!](https://document-app-rag.streamlit.app/)
+**Live Demo:** [Try it here!](https://document-app-rag-hasitha.streamlit.app/)
 
 AI-powered document question-answering system using Retrieval Augmented Generation (RAG) architecture. Upload any PDF and ask questions in natural language.
 
@@ -78,7 +78,7 @@ Upload a PDF document and ask questions about it. The AI reads your document, fi
 ## 🚀 Try It Yourself
 
 ### Live Demo
-👉 **[document-qa-rag.streamlit.app](https://document-app-rag.streamlit.app/)**
+👉 **[document-qa-rag.streamlit.app](https://document-app-rag-hasitha.streamlit.app/)**
 
 ### Run Locally
 ```bash
