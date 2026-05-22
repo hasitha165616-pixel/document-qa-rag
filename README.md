@@ -25,9 +25,10 @@ The system combines:
 - semantic vector search
 - document chunking
 - embeddings
-- LLM-based response generation
+- vector databases
+- LLM-powered response generation
 
-to provide contextual and source-aware answers.
+to provide contextual and accurate answers.
 
 ---
 
@@ -39,7 +40,7 @@ to provide contextual and source-aware answers.
 - 💬 Interactive chat interface
 - ⚡ Fast contextual responses
 - 📚 Context-grounded answers
-- 🌐 Web deployment with Render
+- 🌐 Deployed on Render
 - 🎯 User-friendly Streamlit interface
 
 ---
@@ -71,3 +72,168 @@ to provide contextual and source-aware answers.
 7. Relevant chunks are retrieved using semantic similarity
 8. Retrieved context is sent to Gemini AI
 9. AI generates contextual response
+```
+
+---
+
+# 🧠 Why RAG?
+
+Traditional AI systems may hallucinate or generate inaccurate responses.
+
+Retrieval Augmented Generation (RAG) improves reliability by:
+- grounding answers in actual document content
+- retrieving relevant context before generation
+- improving factual consistency
+- enabling document-specific querying
+
+This makes the system more accurate and trustworthy for real-world document analysis.
+
+---
+
+# 💼 Use Cases
+
+### 📌 HR & Internal Documentation
+- Employee handbook Q&A
+- Company policy clarification
+- Internal knowledge search
+
+### 📌 Legal
+- Contract clause lookup
+- Compliance document analysis
+- Policy interpretation
+
+### 📌 Research & Education
+- Academic paper querying
+- Literature review assistance
+- Study material summarization
+
+### 📌 Customer Support
+- Product documentation assistance
+- Troubleshooting support
+- FAQ automation
+
+---
+
+# 📂 Project Structure
+
+```text
+AI-Document-QA/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── chroma_db/
+├── uploaded_docs/
+└── utils/
+```
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/hasitha165616-pixel/document-qa-rag.git
+cd document-qa-rag
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 3️⃣ Configure Environment Variables
+
+Create a `.env` file:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+---
+
+## 4️⃣ Run Application Locally
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# 🌐 Deployment
+
+This application is deployed using Render.
+
+### Render Configuration
+
+| Setting | Value |
+|---|---|
+| Build Command | `pip install -r requirements.txt` |
+| Start Command | `streamlit run app.py --server.port $PORT --server.address 0.0.0.0` |
+
+---
+
+# 📊 Performance
+
+- ⚡ Average response time: 2–3 seconds
+- 📄 Supports text-based PDFs
+- 🔍 Semantic retrieval using vector embeddings
+- 💾 Efficient vector search with ChromaDB
+
+---
+
+# 🔮 Future Enhancements
+
+- [ ] Multi-document querying
+- [ ] OCR support for scanned PDFs
+- [ ] Conversation memory
+- [ ] Export Q&A sessions
+- [ ] Multi-language support
+- [ ] Authentication system
+
+---
+
+# 📚 Key Learnings
+
+This project helped me gain practical experience in:
+- Retrieval Augmented Generation (RAG)
+- Vector databases and embeddings
+- Semantic search systems
+- LangChain pipelines
+- Prompt engineering
+- AI application deployment
+- Streamlit-based UI development
+
+---
+
+# ⚠️ Limitations
+
+- Supports only text-based PDFs
+- Scanned documents require OCR support
+- Large documents may increase processing time
+- Optimized mainly for English-language documents
+
+---
+
+# 🙏 Acknowledgements
+
+- LangChain
+- Google Gemini API
+- Streamlit
+- ChromaDB
+- HuggingFace Sentence Transformers
+- Render
+
+---
+
+# 👩‍💻 Author
+
+Developed by Hasitha
+
+If you found this project useful, feel free to ⭐ the repository.
