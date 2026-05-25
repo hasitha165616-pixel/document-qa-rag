@@ -1,3 +1,7 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import streamlit as st
 import google.generativeai as genai
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -188,7 +192,7 @@ if st.session_state.vector_store is not None:
                 retriever = st.session_state.vector_store.as_retriever(
                     search_kwargs={"k": 4}  # Get top 4 most relevant chunks
                 )
-                relevant_docs = retriever.get_relevant_documents(question)
+                relevant_docs = retriever.invoke(question)
                 
                 # Combine context
                 context = "\n\n".join([doc.page_content for doc in relevant_docs])
